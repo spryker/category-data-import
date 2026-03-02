@@ -27,11 +27,6 @@ class CategoryDataImportDependencyProvider extends DataImportDependencyProvider
      */
     public const FACADE_URL = 'FACADE_URL';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
@@ -41,11 +36,6 @@ class CategoryDataImportDependencyProvider extends DataImportDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCategoryFacade(Container $container): Container
     {
         $container->set(static::FACADE_CATEGORY, function (Container $container) {
@@ -55,11 +45,6 @@ class CategoryDataImportDependencyProvider extends DataImportDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addUrlFacade(Container $container): Container
     {
         $container->set(static::FACADE_URL, function (Container $container) {

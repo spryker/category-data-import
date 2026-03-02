@@ -18,11 +18,6 @@ class StoreRelationshipFilterStep implements DataImportStepInterface
      */
     protected const ALL_STORES_IDENTIFIER = '*';
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         if ($dataSet[CategoryStoreDataSetInterface::COLUMN_EXCLUDED_STORE_NAME] === static::ALL_STORES_IDENTIFIER) {
@@ -32,11 +27,6 @@ class StoreRelationshipFilterStep implements DataImportStepInterface
         $this->filterAgainstIncludedStores($dataSet);
     }
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     protected function filterAgainstExcludedStores(DataSetInterface $dataSet): void
     {
         if ($dataSet[CategoryStoreDataSetInterface::COLUMN_INCLUDED_STORE_NAME] === static::ALL_STORES_IDENTIFIER) {
@@ -51,11 +41,6 @@ class StoreRelationshipFilterStep implements DataImportStepInterface
         );
     }
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     protected function filterAgainstIncludedStores(DataSetInterface $dataSet): void
     {
         $dataSet[CategoryStoreDataSetInterface::INCLUDED_STORE_IDS] = array_diff(

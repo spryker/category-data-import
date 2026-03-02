@@ -47,9 +47,6 @@ class StoreRelationshipFilterStepTest extends Unit
         $this->assertEquals($dataSet[CategoryStoreDataSetInterface::EXCLUDED_STORE_IDS], $expExclude);
     }
 
-    /**
-     * @return array
-     */
     public function executeWillCorrectlyFilterStoresToWriteDataProvider(): array
     {
         return [

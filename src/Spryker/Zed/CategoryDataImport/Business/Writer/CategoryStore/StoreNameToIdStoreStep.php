@@ -30,11 +30,6 @@ class StoreNameToIdStoreStep implements DataImportStepInterface
      */
     protected static $areAllStoresLoaded = false;
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $dataSet[CategoryStoreDataSetInterface::INCLUDED_STORE_IDS] = $this->getStoreIds(

@@ -81,49 +81,31 @@ class CategoryDataImportBusinessFactory extends DataImportBusinessFactory
         return new CategoryReader();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCategoryKeyToIdCategoryStep(): DataImportStepInterface
     {
         return new CategoryKeyToIdCategoryStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createStoreNameToIdStoreStep(): DataImportStepInterface
     {
         return new StoreNameToIdStoreStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createStoreRelationshipFilterStep(): DataImportStepInterface
     {
         return new StoreRelationshipFilterStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCategoryStoreWriteStep(): DataImportStepInterface
     {
         return new CategoryStoreWriteStep($this->getCategoryFacade());
     }
 
-    /**
-     * @return \Spryker\Zed\CategoryDataImport\Dependency\Facade\CategoryDataImportToCategoryFacadeInterface
-     */
     public function getCategoryFacade(): CategoryDataImportToCategoryFacadeInterface
     {
         return $this->getProvidedDependency(CategoryDataImportDependencyProvider::FACADE_CATEGORY);
     }
 
-    /**
-     * @return \Spryker\Zed\CategoryDataImport\Dependency\Facade\CategoryDataImportToUrlFacadeInterface
-     */
     public function getUrlFacade(): CategoryDataImportToUrlFacadeInterface
     {
         return $this->getProvidedDependency(CategoryDataImportDependencyProvider::FACADE_URL);

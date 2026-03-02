@@ -89,11 +89,6 @@ class CategoryWriterStep extends PublishAwareStep implements DataImportStepInter
      */
     protected CategoryDataImportConfig $categoryDataImportConfig;
 
-    /**
-     * @param \Spryker\Zed\CategoryDataImport\Business\Model\Reader\CategoryReaderInterface $categoryReader
-     * @param \Spryker\Zed\CategoryDataImport\Dependency\Facade\CategoryDataImportToUrlFacadeInterface $urlFacade
-     * @param \Spryker\Zed\CategoryDataImport\CategoryDataImportConfig $categoryDataImportConfig
-     */
     public function __construct(
         CategoryReaderInterface $categoryReader,
         CategoryDataImportToUrlFacadeInterface $urlFacade,
@@ -361,11 +356,6 @@ class CategoryWriterStep extends PublishAwareStep implements DataImportStepInter
         return $categoryTemplateEntity;
     }
 
-    /**
-     * @param \Orm\Zed\Url\Persistence\SpyUrl $urlEntity
-     *
-     * @return \Generated\Shared\Transfer\UrlTransfer
-     */
     protected function mapUrlEntityToUrlTransfer(SpyUrl $urlEntity): UrlTransfer
     {
         return (new UrlTransfer())

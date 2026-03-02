@@ -24,11 +24,6 @@ class CategoryDataImportToUrlFacadeBridge implements CategoryDataImportToUrlFaca
         $this->urlFacade = $urlFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\UrlTransfer $urlTransfer
-     *
-     * @return \Generated\Shared\Transfer\UrlTransfer
-     */
     public function updateUrl(UrlTransfer $urlTransfer): UrlTransfer
     {
         return $this->urlFacade->updateUrl($urlTransfer);

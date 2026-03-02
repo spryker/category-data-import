@@ -63,9 +63,6 @@ class CategoryDataImportConfig extends DataImportConfig
         return false;
     }
 
-    /**
-     * @return string
-     */
     protected function getModuleRoot(): string
     {
         $moduleRoot = realpath(

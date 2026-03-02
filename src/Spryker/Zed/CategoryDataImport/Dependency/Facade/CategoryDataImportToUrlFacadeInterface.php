@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\UrlTransfer;
 
 interface CategoryDataImportToUrlFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\UrlTransfer $urlTransfer
-     *
-     * @return \Generated\Shared\Transfer\UrlTransfer
-     */
     public function updateUrl(UrlTransfer $urlTransfer): UrlTransfer;
 }

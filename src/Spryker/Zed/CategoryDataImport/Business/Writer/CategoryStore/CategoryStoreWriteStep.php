@@ -40,19 +40,11 @@ class CategoryStoreWriteStep extends PublishAwareStep implements DataImportStepI
      */
     protected $categoryFacade;
 
-    /**
-     * @param \Spryker\Zed\CategoryDataImport\Dependency\Facade\CategoryDataImportToCategoryFacadeInterface $categoryFacade
-     */
     public function __construct(CategoryDataImportToCategoryFacadeInterface $categoryFacade)
     {
         $this->categoryFacade = $categoryFacade;
     }
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $storeIdsToAdd = $dataSet[CategoryStoreDataSetInterface::INCLUDED_STORE_IDS];
@@ -79,11 +71,6 @@ class CategoryStoreWriteStep extends PublishAwareStep implements DataImportStepI
         $this->addPublishEvents(static::ENTITY_CATEGORY_PUBLISH, $dataSet[CategoryStoreDataSetInterface::ID_CATEGORY]);
     }
 
-    /**
-     * @param int $idCategory
-     *
-     * @return \Generated\Shared\Transfer\StoreRelationTransfer
-     */
     protected function getExistingCategoryStoreRelations(int $idCategory): StoreRelationTransfer
     {
         $storeIds = SpyCategoryStoreQuery::create()

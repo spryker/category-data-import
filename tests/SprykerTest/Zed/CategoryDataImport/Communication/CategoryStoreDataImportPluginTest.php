@@ -70,9 +70,6 @@ class CategoryStoreDataImportPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -83,9 +80,6 @@ class CategoryStoreDataImportPluginTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testImportWillImportCategoryStoreRelationshipsData(): void
     {
         // Arrange
@@ -118,9 +112,6 @@ class CategoryStoreDataImportPluginTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testImportWillImportCategoryStoreRelationshipsDataWithParentInheritance(): void
     {
         // Arrange
@@ -161,9 +152,6 @@ class CategoryStoreDataImportPluginTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testGetImportTypeReturnsExpectedTypeOfImporter(): void
     {
         //Assign

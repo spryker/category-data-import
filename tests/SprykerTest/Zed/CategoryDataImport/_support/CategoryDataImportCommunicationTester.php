@@ -30,11 +30,6 @@ class CategoryDataImportCommunicationTester extends Actor
 {
     use _generated\CategoryDataImportCommunicationTesterActions;
 
-    /**
-     * @param int $idCategory
-     *
-     * @return int
-     */
     public function countCategoryStoreRelations(int $idCategory): int
     {
         return SpyCategoryStoreQuery::create()

@@ -24,11 +24,6 @@ class CategoryDataImportToCategoryFacadeBridge implements CategoryDataImportToCa
         $this->categoryFacade = $categoryFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\UpdateCategoryStoreRelationRequestTransfer $updateCategoryStoreRelationRequestTransfer
-     *
-     * @return void
-     */
     public function updateCategoryStoreRelation(
         UpdateCategoryStoreRelationRequestTransfer $updateCategoryStoreRelationRequestTransfer
     ): void {
