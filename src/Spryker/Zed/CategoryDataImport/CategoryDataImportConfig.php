@@ -13,11 +13,15 @@ use Spryker\Zed\DataImport\DataImportConfig;
 class CategoryDataImportConfig extends DataImportConfig
 {
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_CATEGORY = 'category';
 
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_CATEGORY_STORE = 'category-store';
